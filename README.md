@@ -216,3 +216,25 @@ Végezetül a Github oldalán leellenőrizhetjük a munkánkat.
     - register.njk
     - showCv.njk
     - table.njk
+    
+## Felhasználói dokumentáció
+
+Futtatáshoz szükséges operációs rendszer: Tetszőleges operációs rendszer
+
+A futtatáshoz szükséges hardver: Operációs rendszerek szerint megadva
+
+Egyéb követelmények: Internet böngésző telepítése, JavaScript ajánlott
+
+Program használata:
+
+Böngészőben nyissuk meg a főoldalt
+Jobb felső sarokban kattintsunk a Bejelentkezés feliratra
+Bejelentkezés/Regisztráció után a főoldalra jutunk
+Az Új kategória felvitele gombra kattintva tudunk új kategóriákat felvenni a listába
+Töltsük ki az űrlapot
+Hibás adatok esetén az űrlap jelezni fogja a hibát
+Submit gombra kattintva mentsük el az adatokat
+Önéletrajzok böngészése oldal: Listában megtekinthetjük az önéletrajzokat
+Lista oldalon: Megtekint gombra kattintva a megtekintés oldalra jutunk
+Megtekintés oldalon található a szerkesztés gomb, értékelés és a törlés funkció
+Szerkesztés oldal: megegyezik az új önéletrajz felvitel funkcióval, csak a megadott adatokat a felület megjeleníti
