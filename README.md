@@ -47,13 +47,36 @@ A program legfőbb célja az önéletrajzkezelő felület megvalósítása. Az a
 
 Vegyünk példának néhány egyszerű folyamatot:
 
-Bejelentkezés:
+**Bejelentkezés:**
 
 + A felhasználó az oldalra érkezve regisztrál
 + Regisztráció után a Belépés gombra kattint
 + Az adatainak kitöltése után a Submit gombra kattintva bejelentkezik
 
 ![alt text for image](images/bejelentkezes.png)
+
+
+**Új önéletrajz létrehozásaa, megtekintése:**
+
++ A felhasználó bejeletkezik az oldalra
++ Az önéletrajz feltöltése gombra kattint
++ Az adatok kitöltése után a Submit gommbal elmenti az új önéletrajzot
++ Az önéletrajz böngészésre gombra kattint
++ A listából a megtekinteni kívánt önéletrajz sorában lévő megtekintés gombra kattint
+
+![alt text for image](images/uj_oneletrajz.png)
+
+
+**Szakember értékelése:**
+
++ A felhasználó bejeletkezik az oldalra
++ Az önéletrajz böngészésre gombra kattint
++ A listából a megtekinteni kívánt önéletrajz sorában lévő megtekintés gombra kattint
++ Az értékel gombra kattint
+
+A felhasználó a saját önéletrajzát nem értékelheti, csak másokét!
+
+![alt text for image](images/oneletrajz_ertekeles.png)
 
 ## Tervezés
 
