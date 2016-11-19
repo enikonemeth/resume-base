@@ -82,26 +82,28 @@ A felhasználó a saját önéletrajzát nem értékelheti, csak másokét!
 
 ### Architektúra terv
 
-####. Komponensdiagram
+#### Komponensdiagram
 
-
+![alt text for image](images/komponensdiagram.png)
 
 ##### Oldaltérkép:
 
-Publikus:
+**Publikus:**
 
-Főoldal
-Bejelentkezés
-Regisztráció
-Bejelentkezett:
+- Főoldal
+- Önéletrajzok böngészése
+    + Önéletrajz megtekintése
+- Belépés
+- Regisztráció
 
-Főoldal
-Új koktél felvétele
-Listaoldal
-Koktél törlése
-Koktél megtekintése
-Koktél szerkesztése
-Komment hozzáfűzése
+**Felhasználó**
+
+- Kilépés
+- Önéletrajzok böngészése
+	+ Szakember értékelése
+- Új kategória felvitele
+- Új önéletrajz felvitele
+
 #### Végpontok
 
 GET/: főoldal
