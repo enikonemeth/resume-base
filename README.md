@@ -45,17 +45,15 @@ A program legfőbb célja az önéletrajzkezelő felület megvalósítása. Az a
 
 ![alt text for image](images/hasznalati_esetek.png)
 
-Vegyünk példának egy egyszerű folyamatot:
+Vegyünk példának néhány egyszerű folyamatot:
 
-Meglévő recept szerkesztése:
+Bejelentkezés:
 
-A felhasználó az oldalra érkezve, bejelentkezik vagy regisztrál
-Regisztráció után megtekintheti a recepteket listázó oldalt, ahol kiválaszthatja a szerkeszteni kívánt receptet.
-Megnyomja a „Megtekintés” feliratú gombot
-A megtekintés oldalon kiválaszthatja a „Szerkesztés” gombot
-Szerkesztés oldalon felviszi az új adatokat
-Submit gombra kattintva elmenti a változásokat
++ A felhasználó az oldalra érkezve regisztrál
++ Regisztráció után a Belépés gombra kattint
++ Az adatainak kitöltése után a Submit gombra kattintva bejelentkezik
 
+![alt text for image](images/bejelentkezes.png)
 
 ## Tervezés
 
