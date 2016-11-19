@@ -1,12 +1,12 @@
 # Dokumentáció
 
-##Önéletrajz bázis
+### Önéletrajz bázis
 
 Készítette: Pusztai Enikő / I42XKJ
 
-1. Követelményanalízis
+## Követelményanalízis
 
-1.1. Célkitűzés, projektindító dokumentum
+### Célkitűzés, projektindító dokumentum
 
 A program legfőbb célja az önéletrajzkezelő felület megvalósítása. Az adatok védelme érdekében legyen lehetőség regisztrációra, majd bejelentkezésre. Bejelentkezett felhasználó új önéltrajzot hozhat létre, módosíthatja, vagy törölheti azt. A felhasználónak lehetősége nyílik más szakemberek értékelésére is. Vendégként bárki megtekintheti az elkészült önéletrajzokat és azok értékeléseit is.
 
