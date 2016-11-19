@@ -130,94 +130,89 @@ A felhasználó a saját önéletrajzát nem értékelheti, csak másokét!
 #### Oldalvázlatok:
 
 **Főoldal** 
+
 ![alt text for image](images/fooldal.jpg)
 
 **Kategória felvitele** 
+
 ![alt text for image](images/kategoria_felvitele.jpg)
 
 **Önéletrajz lista**
+
 ![alt text for image](images/oneletrajz_lista.jpg)
 
 **Önéletrajz megtekintése**
-![alt text for image](images/oneletrajz_megtekintese.jpg)
+
+![alt text for image](images/oneletrajz_megtekintes.jpg)
 
 **Értékelés**
+
 ![alt text for image](images/ertekeles.jpg)
 
 #### Designtervek (végső megvalósítás kinézete):
 
 **Főoldal** 
+
 ![alt text for image](images/fooldal2.png)
 
 **Kategória felvitele** 
+
 ![alt text for image](images/kategoria_felvitele2.png)
 
 **Önéletrajz lista**
+
 ![alt text for image](images/oneletrajz_lista2.png)
 
 **Önéletrajz megtekintése**
-![alt text for image](images/oneletrajz_megtekintese2.png)
+
+![alt text for image](images/oneletrajz_megtekintes2.png)
 
 **Értékelés**
+
 ![alt text for image](images/ertekeles2.png)
 
 #### Osztálymodell
 
-Adatmodell
+**Adatmodell**
 
-
-
-Adatbázisterv
-
-
-
-#### Dinamikus működés
-
-Szekvenciadiagram
-
-Vegyünk példának a regisztrációt, majd egy új elem felvételét, szerkesztését, törlését, mindezt szekvenciadiagrammon.
-
-
+![alt text for image](images/adatmodell.png)
 
 ## Implementáció
 
 #### Fejlesztőkörnyezet
 
-Webes IDE: Cloud9
-
 Github account szükséges
 Belépés után új workspace létrehozása (node.js)
 Ezután elkezdhetjük a kód írását
 git add paranccsal kiválaszthatunk egy fájlt verzionálásra, vagy git add . paranccsal az összes fájlt kiválaszthatjuk
-git commit -m "commit" paranccsal feltehetjük a fájlokat a cloud9 helyi tárolójába. Az így megjelölt verziókhoz a későbbiekben visszatérhetünk, különbségüket megtekinthetjük.
+git commit -m "commit" paranccsal feltehetjük a fájlokat. Az így megjelölt verziókhoz a későbbiekben visszatérhetünk, különbségüket megtekinthetjük.
 git push origin master paranccsal a lokális tárolóból feltölthetjük a tartalmat a Github-ra.
 Végezetül a Github oldalán leellenőrizhetjük a munkánkat.
+
 #### Könyvtárstruktúra, funkciók
 
-ckd193-beadando1
-config
-waterline.js
-controllers
-index.js
-recipes.js
-login.js
-models
-comment.js
-recipes.js
-recipes.test.js
-user.js
-user.test.js
-views: handlebars (hbs) fájlok
-login
-index.hbs
-signup.hbs
-recipes
-edit.hbs
-list.hbs
-new.hbs
-show.hbs
-index.hbs
-layout.hbs
-bower.json
-package.json
-server.js
+- cvs
+  + app
+    + Http
+      + Controllers
+        - CategoryController.js
+        - CVController.js
+        - UserController.js
+      - routes.js
+    + Model
+      - Category.js
+      - Cv.js
+      - Rating.js
+      - Token.js
+      - User.js
+  + resources
+    - createCategory.njk
+    - createCv.njk
+    - editCv.njk
+    - layout.njk
+    - login.njk
+    - main.njk
+    - rateCv.njk
+    - register.njk
+    - showCv.njk
+    - table.njk
