@@ -34,14 +34,16 @@ A program legfőbb célja az önéletrajzkezelő felület megvalósítása. Az a
 ### Használatieset-modell, funkcionális követelmények
 
 **Vendég:** Csak a publikus funkciókat ér el
++ Publikus oldalak megjelenítése
+(önéletrajzok, kategóriák, konkrét önéletrajz, önéletrajz értékelésének megtekintése)
 
+**Bejelentkezett felhasználó:** A publikus funkciókon kívül
++ Új kategória felvitele
++ Saját önéletrajz szerkesztése
++ Saját önéletrajz törlése
++ Szakemberek értékelése
 
-Új recept felvétele
-Meglévő recept megtekintése
-Meglévő recept szerkesztése
-Meglévő recept törlése
-Komment írása
-
+![alt text for image](images/hasznalati_esetek.png)
 
 Vegyünk példának egy egyszerű folyamatot:
 
