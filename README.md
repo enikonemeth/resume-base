@@ -1,8 +1,8 @@
 # Dokumentáció
 
-Önéletrajz bázis
+##Önéletrajz bázis
 
-Készítette: Pusztai Enikő
+Készítette: Pusztai Enikő / I42XKJ
 
 1. Követelményanalízis
 
