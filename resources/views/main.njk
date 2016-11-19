@@ -1,0 +1,29 @@
+{% extends 'layout' %}
+
+{% block content %}
+
+<h2>{{ name }}</h2>
+
+<div class="col-md-4">
+  {% for category in categories %}
+  <ul class="list-group">
+    <li class="list-group-item" item-width="20px">
+      {{ category.name }}
+    </li>
+  </ul>
+  {% endfor %}
+</div>
+
+<div class="col-md-5" >
+    <h4 class="list-group-item-heading">Mi az az Önéletrajz bázis?</h4>
+    <p class="list-group-item-text">Az Önéletrajz bázissal könnyedén kereshet munkaerőt! Böngésszen Ön is a több ezer álláskereső között! 
+      Állást keres? Töltsön fel önéletrajzot, hogy könnyebben megtalálják! Az Önéletrajz bázis segítségével könnyen értékelheti kollégája
+      vagy beosztottja teljesítményét. Regisztráljon még ma!</p>
+</div>
+
+{% if currentUser.id != null %}
+<a class="btn btn-info" href="/category/create" role="button">Új kategória hozzáadása</a>
+{% endif %}
+
+{% endblock %}
+

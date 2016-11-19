@@ -1,0 +1,42 @@
+{% extends 'layout' %}
+
+{% block content %}
+
+<h2>{{ cv.name }}</h2>
+<pre>
+<p>{{ cv.category.name }}</p>
+</pre>
+<h3>Életkor</h3>
+<pre>
+{{ cv.age }}
+</pre>
+<h3>Legmagasabb iskolai végzettség</h3>
+<pre>
+{{ cv.education }}
+</pre>
+<h3>Bemutatkozás</h3>
+<pre>
+{{ cv.about }}
+</pre>
+
+{% for rating in ratings %}
+    {% if cv.id  == rating.cv_id  %}
+<h5>{{ rating.rate }}/10 pont</h5>
+<div class="progress">
+  <div class="progress-bar progress-bar-info" style="width: {{rating.rate}}0%"></div>
+</div>
+
+    {% endif %}
+{% endfor %}
+
+{% if currentUser.id == cv.user_id %}
+<a class="btn btn-primary" href="/cvs/{{cv.id}}/edit" role="button">Szerkeszt</a>
+<a class="btn btn-danger" href="/cvs/{{cv.id}}/delete" role="button">Töröl</a>
+{% endif %}
+{% if currentUser.id != null %}
+    {% if currentUser.id != cv.user_id %}
+<a class="btn btn-info" href="/cvs/{{cv.id}}/rate" role="button">Értékel</a>
+    {% endif %}
+{% endif %}
+
+{% endblock %}
