@@ -134,8 +134,13 @@ class CvController {
   }
 
   * doDelete(request, response) {
+    
     const id = request.param('id')
     const cv = yield Cv.find(id)
+    if (request.currentUser.id !== cv.user_id) {
+      response.unauthorized('Nincs jog')
+      return
+    }
     if (!cv) {
       response.notFound('Cv does not exist')
       return
