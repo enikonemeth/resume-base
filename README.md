@@ -10,39 +10,31 @@ Készítette: Pusztai Enikő / I42XKJ
 
 A program legfőbb célja az önéletrajzkezelő felület megvalósítása. Az adatok védelme érdekében legyen lehetőség regisztrációra, majd bejelentkezésre. Bejelentkezett felhasználó új önéltrajzot hozhat létre, módosíthatja, vagy törölheti azt. A felhasználónak lehetősége nyílik más szakemberek értékelésére is. Vendégként bárki megtekintheti az elkészült önéletrajzokat és azok értékeléseit is.
 
-Funkcionális követelmények:
+### Funkcionális követelmények:
 
-Regisztrációra
-Bejelentkezés
-Csak bejelentkezett felhasználók által elérhető funkciók
-új ital felvételére a listába
-a meglévő italok szerkesztésére
-a meglévő italok törlésére
-komment írása
-Nem funkcionális követelmények:
++ Vendégként a főoldalon szeretném megtekinteni az önéletrajzok kategóriáit.
++ Vendégként szeretnék az önéletrajzok között szabadon böngészni.
++ Vendégként szeretnék egy önéletrajzot megtekinteni.
++ Vendégként szeretném egy önéletrajz értékelését megtekinteni.
++ Vendégként szeretnék tudni regisztrálni az oldalra.
++ Felhasználóként szeretnék tudni bejelentkezni az oldalra.
++ Felhasználóként szeretném tudni a profiladatomat szerkeszteni.
++ Felhasználóként szeretnék tudni új önéletrajzot feltölteni.
++ Felhasználóként szeretnék tudni szakembert értékelni.
 
-Könnyű áttekinthetőség: Színekkel típus szerint csoportosítás
-Használhatóság: Könnyű áttekinthetőség, ésszerű elrendezés, könnyen kezelhetőség
-Megbízhatóság: jelszóval védett funkciók, és a jelszavak védelme a háttérben. Hibásan bevitt adatok esetén a program jól láthatóan jelezzen a felhasználónak, és emelje ki a hibás beviteli mezőket. A jól bevitt adatok maradjanak az űrlapban.
-Karbantarthatóság: könnyen lehessen bővíteni, a különböző típusú fájlok külön csoportosítva, ésszerűen legyenek felbontva, a könnyebb fejleszthetőség miatt
-1.2. Szakterületi fogalomjegyzék
+### Nem funkcionális követelmények:
++ Felhasználóbarát, ergonomikus elrendezés és kinézet.
++ Gyors működés.
++ Biztonságos működés: jelszavak tárolása, funkciókhoz való hozzáférés.
 
-Fajták:
+### Szakterületi fogalomjegyzék
 
-Shot: Felespohárban felszolgált, gyakran csak alkoholt tartalmazó ital.
-Cocktail: Koktélos pohárban, szirupokkal, gyömülcslevekkel készített ital.
-Long drink: Egyszerű long-os pohárban felszolgált ital, gyakran egy fajta alkoholt és üdítőt tartalmaz.
-Aperitif: Étkezések előtt, étvágy fokozás céljából fogyasztott ital.
-Alap ital: A koktélban legnagyobb arányban részt vevő tömény alkohol.
+**Önéletrajz:** Személyes adatgyűjtemény egy munkavállaló eddigi tevénységéről
 
-1.3. Használatieset-modell, funkcionális követelmények
+### Használatieset-modell, funkcionális követelmények
 
-Vendég: Csak a publikus oldalakat éri el
+**Vendég:** Csak a publikus funkciókat ér el
 
-Főoldal
-Bejelentkezés
-Regisztráció
-Bejelentkezett felhasználó: A publikus oldalak elérésén felül egyéb funkciókhoz is hozzáfér.
 
 Új recept felvétele
 Meglévő recept megtekintése
@@ -63,15 +55,15 @@ Szerkesztés oldalon felviszi az új adatokat
 Submit gombra kattintva elmenti a változásokat
 
 
-2. Tervezés
+## Tervezés
 
-2.1. Architektúra terv
+### Architektúra terv
 
-2.1.1. Komponensdiagram
+####. Komponensdiagram
 
 
 
-2.1.2. Oldaltérkép:
+##### Oldaltérkép:
 
 Publikus:
 
@@ -87,7 +79,7 @@ Koktél törlése
 Koktél megtekintése
 Koktél szerkesztése
 Komment hozzáfűzése
-2.1.3. Végpontok
+#### Végpontok
 
 GET/: főoldal
 GET/login: bejelentkező oldal
@@ -103,9 +95,9 @@ POST/recipes/id: új megjegyzés felvitele
 GET/recipes/delete=id: koktél recept törlése
 GET/recipes/edit=id: koktél módosítása
 POST/recipes/edit=id: koktél módosítása, adatok felküldése
-2.2. Felhasználói-felület modell
+### Felhasználói-felület modell
 
-2.2.1.Oldalvázlatok:
+#### Oldalvázlatok:
 
 Főoldal 
 
@@ -121,7 +113,7 @@ Koktél megtekintése
 
 Koktél szerkesztése 
 
-2.2.2.Designtervek (végső megvalósítás kinézete):
+#### Designtervek (végső megvalósítás kinézete):
 
 Főoldal 
 
@@ -135,7 +127,7 @@ Koktél listaoldal
 
 Koktél megtekintése 
 
-2.2.3. Osztálymodell
+#### Osztálymodell
 
 Adatmodell
 
@@ -145,7 +137,7 @@ Adatbázisterv
 
 
 
-2.2.4. Dinamikus működés
+#### Dinamikus működés
 
 Szekvenciadiagram
 
@@ -153,9 +145,9 @@ Vegyünk példának a regisztrációt, majd egy új elem felvételét, szerkeszt
 
 
 
-3. Implementáció
+## Implementáció
 
-3.1.1. Fejlesztőkörnyezet
+#### Fejlesztőkörnyezet
 
 Webes IDE: Cloud9
 
@@ -166,7 +158,7 @@ git add paranccsal kiválaszthatunk egy fájlt verzionálásra, vagy git add . p
 git commit -m "commit" paranccsal feltehetjük a fájlokat a cloud9 helyi tárolójába. Az így megjelölt verziókhoz a későbbiekben visszatérhetünk, különbségüket megtekinthetjük.
 git push origin master paranccsal a lokális tárolóból feltölthetjük a tartalmat a Github-ra.
 Végezetül a Github oldalán leellenőrizhetjük a munkánkat.
-3.1.2. Könyvtárstruktúra, funkciók
+#### Könyvtárstruktúra, funkciók
 
 ckd193-beadando1
 config
