@@ -106,42 +106,43 @@ A felhasználó a saját önéletrajzát nem értékelheti, csak másokét!
 
 #### Végpontok
 
-GET / : főoldal
-GET /cvs : önéletrajzok
-GET /cvs/create : új önéletrajz felvitele, űrlap megjelenítése
-POST /cvs/create : új önéletrajz felvitele, adatok küldése
-GET /cvs/:id :  önéletrajz megtekintése
-GET /cvs/:id/edit : önéletrajz szerkesztése, űrlap megjelenítése
-POST /cvs/:id/edit : önéletrajz szerkesztése, adatok küldése
-GET /cvs/:id/delete : önéletrajz törlése
-GET /cvs/:id/rate : önéletrajz értékelése, űrlap megjelenítése
-POST /cvs/:id/rate : önéletrajz értékelése, adatok küldése
-GET /category/create : kategória felvitele, űrlap megjelenítése
-POST /category/create : kategória felvitele, adatok küldése
-GET /register : regisztráció, űrlap megjelenítése
-POST /register : regisztráció, adato küldése
-GET /login : bejelentkező oldal, űrlap megtekintése
-POST /login : bejelentkező oldal, adatok küldése
-GET /logout : kijelentkező oldal
+- GET / : főoldal
+- GET /cvs : önéletrajzok
+- GET /cvs/create : új önéletrajz felvitele, űrlap megjelenítése
+- POST /cvs/create : új önéletrajz felvitele, adatok küldése
+- GET /cvs/:id :  önéletrajz megtekintése
+- GET /cvs/:id/edit : önéletrajz szerkesztése, űrlap megjelenítése
+- POST /cvs/:id/edit : önéletrajz szerkesztése, adatok küldése
+- GET /cvs/:id/delete : önéletrajz törlése
+- GET /cvs/:id/rate : önéletrajz értékelése, űrlap megjelenítése
+- POST /cvs/:id/rate : önéletrajz értékelése, adatok küldése
+- GET /category/create : kategória felvitele, űrlap megjelenítése
+- POST /category/create : kategória felvitele, adatok küldése
+- GET /register : regisztráció, űrlap megjelenítése
+- POST /register : regisztráció, adato küldése
+- GET /login : bejelentkező oldal, űrlap megtekintése
+- POST /login : bejelentkező oldal, adatok küldése
+- GET /logout : kijelentkező oldal
 
 
 ### Felhasználói-felület modell
 
 #### Oldalvázlatok:
 
-Főoldal 
+**Főoldal** 
+![alt text for image](images/fooldal.jpg)
 
-Regisztrációs oldal 
+**Kategória felvitele** 
+![alt text for image](images/kategoria_felvitele.jpg)
 
-Bejelentkező oldal 
+**Önéletrajz lista**
+![alt text for image](images/oneletrajz_lista.jpg)
 
-Koktél listaoldal 
+**Önéletrajz megtekintése**
+![alt text for image](images/oneletrajz_megtekintese.jpg)
 
-Új koktél felvétele 
-
-Koktél megtekintése 
-
-Koktél szerkesztése 
+**Értékelés**
+![alt text for image](images/ertekeles.jpg)
 
 #### Designtervek (végső megvalósítás kinézete):
 
