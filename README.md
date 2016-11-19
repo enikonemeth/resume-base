@@ -146,17 +146,20 @@ A felhasználó a saját önéletrajzát nem értékelheti, csak másokét!
 
 #### Designtervek (végső megvalósítás kinézete):
 
-Főoldal 
+**Főoldal** 
+![alt text for image](images/fooldal2.png)
 
-Regisztrációs oldal 
+**Kategória felvitele** 
+![alt text for image](images/kategoria_felvitele2.png)
 
-Bejelentkező oldal 
+**Önéletrajz lista**
+![alt text for image](images/oneletrajz_lista2.png)
 
-Koktél listaoldal 
+**Önéletrajz megtekintése**
+![alt text for image](images/oneletrajz_megtekintese2.png)
 
-Új koktél felvétele 
-
-Koktél megtekintése 
+**Értékelés**
+![alt text for image](images/ertekeles2.png)
 
 #### Osztálymodell
 
