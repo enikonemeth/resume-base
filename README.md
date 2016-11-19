@@ -1,36 +1,197 @@
-# AdonisJs Application
+# Dokumentáció
 
-This repo is the pre-configured project structure to be used for creating ambitious web servers using AdonisJs.
+Önéletrajz bázis
 
-> Make sure to star the official [framework repo](https://github.com/adonisjs/adonis-framework) or [tweet on twitter](https://twitter.com/intent/tweet?url=http://adonisjs.com&text=I%20am%20using%20AdonisJs,%20a%20practical%20MVC%20framework%20for%20nodejs&hashtags=nodejs,adonisframework) :wave:
+Készítette: Pusztai Enikő
 
-## Story
+1. Követelményanalízis
 
-One day a :boy: wanted to write a web application to slowly turn it into a business and make some :moneybag: for better living. Being a Javascript lover, he decided to go with Node.js. 
+1.1. Célkitűzés, projektindító dokumentum
 
-Hosting Node.js applications are cheap and offers lots of mordern programming concepts to build realtime data rich applications.
+A program legfőbb célja jól átláthatóan, és érthetően megjeleníteni az adott koktélok, és italok főbb tulajdonságait, és receptjüket egy webes vastagkliens, azaz egyoldali alkalmazás felhasználásával Az adatok védelme érdekében legyen lehetőség regisztrációra, majd bejelentkezésre. Bejelentkezett felhasználó a koktélok listáját megtekintheti, bővítheti, meglévő elemeket törölhet, valamit megjegyzéseket írhat.
 
-He was so excited and full of energy to build this application and share it with the world. But soon his dreams started struggling with the amount of decisions he has to make, just to build an MVP of his idea. These decisions were not even related to the business and was about.
+Funkcionális követelmények:
 
-1. How should I structure my application?
-2. Why do I need to download 20 modules just to start an HTTP server, parse request body and upload files.
-3. How should I manage the authentication on website, and expose public API for others to interact with the data?
-4. What do I need to do to secure my application from web attacks and how to handle CORS?
-5. Why do I have ton of `require` statements everywhere?
-6. How the heck should I test my code? I am having hard time mocking dependencies.
-7. **WHY THE :fish:** there are no standards to write some code. Hell I am not going to write this application and going for a walk.
+Regisztrációra
+Bejelentkezés
+Csak bejelentkezett felhasználók által elérhető funkciók
+új ital felvételére a listába
+a meglévő italok szerkesztésére
+a meglévő italok törlésére
+komment írása
+Nem funkcionális követelmények:
+
+Könnyű áttekinthetőség: Színekkel típus szerint csoportosítás
+Használhatóság: Könnyű áttekinthetőség, ésszerű elrendezés, könnyen kezelhetőség
+Megbízhatóság: jelszóval védett funkciók, és a jelszavak védelme a háttérben. Hibásan bevitt adatok esetén a program jól láthatóan jelezzen a felhasználónak, és emelje ki a hibás beviteli mezőket. A jól bevitt adatok maradjanak az űrlapban.
+Karbantarthatóság: könnyen lehessen bővíteni, a különböző típusú fájlok külön csoportosítva, ésszerűen legyenek felbontva, a könnyebb fejleszthetőség miatt
+1.2. Szakterületi fogalomjegyzék
+
+Fajták:
+
+Shot: Felespohárban felszolgált, gyakran csak alkoholt tartalmazó ital.
+Cocktail: Koktélos pohárban, szirupokkal, gyömülcslevekkel készített ital.
+Long drink: Egyszerű long-os pohárban felszolgált ital, gyakran egy fajta alkoholt és üdítőt tartalmaz.
+Aperitif: Étkezések előtt, étvágy fokozás céljából fogyasztott ital.
+Alap ital: A koktélban legnagyobb arányban részt vevő tömény alkohol.
+
+1.3. Használatieset-modell, funkcionális követelmények
+
+Vendég: Csak a publikus oldalakat éri el
+
+Főoldal
+Bejelentkezés
+Regisztráció
+Bejelentkezett felhasználó: A publikus oldalak elérésén felül egyéb funkciókhoz is hozzáfér.
+
+Új recept felvétele
+Meglévő recept megtekintése
+Meglévő recept szerkesztése
+Meglévő recept törlése
+Komment írása
 
 
-## Not Anymore
+Vegyünk példának egy egyszerű folyamatot:
 
-This is so frustating. Node.js is a beautiful language but all of the above questions have never been answered together. We all love writing small concise modules but business are not created by downloading 20 modules.
+Meglévő recept szerkesztése:
 
-Developers needs productive tools, so that they can focus on what matters, and not on downloading & finding the best ways to combine these small modules. 
+A felhasználó az oldalra érkezve, bejelentkezik vagy regisztrál
+Regisztráció után megtekintheti a recepteket listázó oldalt, ahol kiválaszthatja a szerkeszteni kívánt receptet.
+Megnyomja a „Megtekintés” feliratú gombot
+A megtekintés oldalon kiválaszthatja a „Szerkesztés” gombot
+Szerkesztés oldalon felviszi az új adatokat
+Submit gombra kattintva elmenti a változásokat
 
-## AdonisJs
 
-AdonisJs is a beautiful framework with pre-configured answers to all of your questions. We not only created this framework, but validated the features of framework with realtime problems and still improving every bit, so that you have to write less and structured code.
+2. Tervezés
 
-This time a :boy: will write his ambitious application and will set the world on :fire:``. Don't hesitate to work on your ideas and we promise to improve the framework every :sunny: and :first_quarter_moon_with_face: and YESSSS do not forget to star us on [:octocat:](https://github.com/adonisjs/adonis-framework)
+2.1. Architektúra terv
 
-"# alkfejl_beadando2" 
+2.1.1. Komponensdiagram
+
+
+
+2.1.2. Oldaltérkép:
+
+Publikus:
+
+Főoldal
+Bejelentkezés
+Regisztráció
+Bejelentkezett:
+
+Főoldal
+Új koktél felvétele
+Listaoldal
+Koktél törlése
+Koktél megtekintése
+Koktél szerkesztése
+Komment hozzáfűzése
+2.1.3. Végpontok
+
+GET/: főoldal
+GET/login: bejelentkező oldal
+POST/login: bejelentkező adatok felküldése
+GET/login/signup: regisztrációs oldal
+POST/login/signup: regisztrációs adatok felküldése
+GET/logout: kijelentkező oldal
+GET/recipes/list: koktéllista oldal
+GET/recipes/new: új koktél felvétele
+POST/recipes/new: új koktél felvételéhez szükséges adatok felküldése
+GET/recipes/id: koktél adatok
+POST/recipes/id: új megjegyzés felvitele
+GET/recipes/delete=id: koktél recept törlése
+GET/recipes/edit=id: koktél módosítása
+POST/recipes/edit=id: koktél módosítása, adatok felküldése
+2.2. Felhasználói-felület modell
+
+2.2.1.Oldalvázlatok:
+
+Főoldal 
+
+Regisztrációs oldal 
+
+Bejelentkező oldal 
+
+Koktél listaoldal 
+
+Új koktél felvétele 
+
+Koktél megtekintése 
+
+Koktél szerkesztése 
+
+2.2.2.Designtervek (végső megvalósítás kinézete):
+
+Főoldal 
+
+Regisztrációs oldal 
+
+Bejelentkező oldal 
+
+Koktél listaoldal 
+
+Új koktél felvétele 
+
+Koktél megtekintése 
+
+2.2.3. Osztálymodell
+
+Adatmodell
+
+
+
+Adatbázisterv
+
+
+
+2.2.4. Dinamikus működés
+
+Szekvenciadiagram
+
+Vegyünk példának a regisztrációt, majd egy új elem felvételét, szerkesztését, törlését, mindezt szekvenciadiagrammon.
+
+
+
+3. Implementáció
+
+3.1.1. Fejlesztőkörnyezet
+
+Webes IDE: Cloud9
+
+Github account szükséges
+Belépés után új workspace létrehozása (node.js)
+Ezután elkezdhetjük a kód írását
+git add paranccsal kiválaszthatunk egy fájlt verzionálásra, vagy git add . paranccsal az összes fájlt kiválaszthatjuk
+git commit -m "commit" paranccsal feltehetjük a fájlokat a cloud9 helyi tárolójába. Az így megjelölt verziókhoz a későbbiekben visszatérhetünk, különbségüket megtekinthetjük.
+git push origin master paranccsal a lokális tárolóból feltölthetjük a tartalmat a Github-ra.
+Végezetül a Github oldalán leellenőrizhetjük a munkánkat.
+3.1.2. Könyvtárstruktúra, funkciók
+
+ckd193-beadando1
+config
+waterline.js
+controllers
+index.js
+recipes.js
+login.js
+models
+comment.js
+recipes.js
+recipes.test.js
+user.js
+user.test.js
+views: handlebars (hbs) fájlok
+login
+index.hbs
+signup.hbs
+recipes
+edit.hbs
+list.hbs
+new.hbs
+show.hbs
+index.hbs
+layout.hbs
+bower.json
+package.json
+server.js
