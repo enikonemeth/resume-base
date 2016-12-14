@@ -238,3 +238,29 @@ Submit gombra kattintva mentsük el az adatokat
 Lista oldalon: Megtekint gombra kattintva a megtekintés oldalra jutunk
 Megtekintés oldalon található a szerkesztés gomb, értékelés és a törlés funkció
 Szerkesztés oldal: megegyezik az új önéletrajz felvitel funkcióval, csak a megadott adatokat a felület megjeleníti
+
+# A szerveroldali alkalmazás progresszív fejlesztése kliensoldali JavaScript segítségével
+Érintett file-ok:
+- cvs
+  + app
+    + Http
+      + Controllers
+        - CategoryController.js
+        - CVController.js
+        - UserController.js
+      - routes.js
+  +public
+    +scripts
+      - cvRate.js
+      - cvTable.js
+      - delete.js
+      - popup_category.js
+      - popup_login.js
+  +resources
+    +views
+    - layout.njk
+    - main.njk
+    - showCv.njk
+    - table.njk
+    
+
