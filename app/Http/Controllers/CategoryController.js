@@ -35,6 +35,27 @@ class CategoryController {
     response.redirect('/');
   }
 
+  * ajaxCategory (request, response) {
+    const categoryData = request.except('_csrf');
+    const rules = {
+      name: 'required'
+    }
+    const validation = yield Validator.validateAll(categoryData, rules);
+    if (validation.fails()) {
+      yield request
+        .withAll()
+        .andWith({ errors: validation.messages() })
+        .flash()
+
+      response.redirect('back')
+      return
+    }
+
+    yield Category.create(categoryData);
+
+    response.ok({success: true});
+  }
+
 }
 
 module.exports = CategoryController

@@ -37,3 +37,9 @@ Route.post('/register', 'UserController.doRegister')
 Route.get('/login', 'UserController.login')
 Route.post('/login', 'UserController.doLogin')
 Route.get('/logout', 'UserController.doLogout')
+
+Route.group('ajax', function () {
+  Route.delete('/cvs/:id/delete', 'CvController.ajaxDelete').middleware('auth')
+  Route.post('/login', 'UserController.ajaxLogin')
+  Route.post('/category', 'CategoryController.ajaxCategory')
+}).prefix('/ajax')

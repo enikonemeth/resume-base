@@ -190,6 +190,17 @@ class CvController {
     response.redirect('/');
   }
 
+  * ajaxDelete(request, response) {
+    const id = request.param('id')
+    const cv = yield Cv.find(id)
+    if (!cv) {
+      response.notFound('Hiba történt a feldolgozás során!')
+      return
+    }
+    yield cv.delete()
+    response.ok({success: true});
+  }
+
 
 }
 
