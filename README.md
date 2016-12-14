@@ -279,3 +279,4 @@ A main.njk oldalon, azaz a főoldalon lévő Új kategória hozzáadása funkci�
 ### Popup login (popup_login.js) [AJAX]
 A layout.njk oldalon lévő Belépés gomb felüldefiniálása. A popup ablakban a login.njk formja jelenik meg.
 
+![alt text for image](images/szekvencia.png)
