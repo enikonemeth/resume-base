@@ -240,7 +240,7 @@ Megtekintés oldalon található a szerkesztés gomb, értékelés és a törlé
 Szerkesztés oldal: megegyezik az új önéletrajz felvitel funkcióval, csak a megadott adatokat a felület megjeleníti
 
 # A szerveroldali alkalmazás progresszív fejlesztése kliensoldali JavaScript segítségével
-Érintett file-ok:
+## Érintett file-ok:
 - cvs
   + app
     + Http
@@ -263,4 +263,19 @@ Szerkesztés oldal: megegyezik az új önéletrajz felvitel funkcióval, csak a 
     - showCv.njk
     - table.njk
     
+## Funkciók működése:
+### Értékelés számának megjelenítése: (cvRate.js)
+A showCv.njk oldalon lévő .progress-bar típusú elemeket számolja meg (és elmenti a db változóba), mely eredményét a h2 típusú bekezdés után jeleníti meg a következő formában: `(${db} értékelés)`
+
+### Feltöltött önéletrajzok számának megjelenítése: (cvTable.js)
+A table.njk oldalon lévő táblázat sorait számolja meg (és elmenti a db változóba), majd az eredményből kivon egyet [a fejlécet nem számoljuk]. Az eredményt a táblázat elé szúrja be a következő formában: `Már ${db-1} szakember töltötte fel önéletrajzát hozzánk!`
+
+### Törlés megerősítése: (delete.js) [AJAX]
+A showCV.njk oldalon lévő Törlés gomb funkciójának felüldefiniálása. A felhasználó megerősítheti a törlés bizonyosságát egy modális segítségével.
+
+### Új kategória hozzáadása popup (popup_category.js) [AJAX]
+A main.njk oldalon, azaz a főoldalon lévő Új kategória hozzáadása funkciógomb felüldefiniálása. A popup ablakban megjelenik a createCategory.njk form része.
+
+### Popup login (popup_login.js) [AJAX]
+A layout.njk oldalon lévő Belépés gomb felüldefiniálása. A popup ablakban a login.njk formja jelenik meg.
 
