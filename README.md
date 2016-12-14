@@ -284,4 +284,39 @@ A layout.njk oldalon lévő Belépés gomb felüldefiniálása. A popup ablakban
 
 # Tesztelés
 
+### Selenium IDE telepítése Firefox böngészőben:
+- https://addons.mozilla.org/hu/firefox/addon/selenium-ide/ oldalon Plugin hozzáadása a Firefoxhoz
+- Firefox újraindítása
+- Selenium IDE megnyitása
+- File/Open Test Suite - Tesztek megnyitása
+- Play Entire Test Suite gomb segítségével tesztek futtatása
 
+### Tesztesetek (tests/cv_test_suite)
+
+#### login:
+- belépés gomb megnyomása
+- email, jelszó kitöltése
+- submit gomb megnyomása
+- Kilépés gomb megkeresése
+
+#### new_category:
+- új kategória gomb megnyomása
+- 'Űrkutatás' szöveg beírása
+- submit gomb megnyomása
+- Űrkutatás szöveg megkeresése
+
+#### new_cv:
+- önéletrajz feltölése gomb megnyomása
+- mezők kitöltése (name, age, education, about)
+- submit gomb megnyomása
+
+#### check_cv:
+- /cvs végpont megnyitása
+- önéletrajzok böngészése gomb megnyomása
+- 'Teszt Géza' szöveg megkeresése
+
+#### logout:
+- kilépés gomb megnyitása
+- belépés gomb megkeresése
+
+  
